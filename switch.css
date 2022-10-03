@@ -1,0 +1,268 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald', sans-serif;
+}
+
+.contenedor{
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: calc(100vh - 156px);
+}
+
+body{
+    min-height: 100vh;
+    background-color: #1E1E1E;
+    font-weight: bold;
+}
+
+
+#dSwitch input[type="checkbox"], #dSwitch2 input[type="checkbox"]{
+    position: relative;
+    width: 80px;
+    height: 40px;
+    -webkit-appearance: none;
+    background: #c6c6c6;
+    outline: none;
+    border-radius: 20px;
+    transition: .5s ease;
+}
+
+#dSwitch input:checked[type="checkbox"], #dSwitch2 input:checked[type="checkbox"]{
+    background-color: #DB1E54;
+    box-shadow: 0px 0px 100px 1px #DB1E54;
+
+}
+
+#dSwitch input[type="checkbox"]:before, #dSwitch2 input[type="checkbox"]:before{
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    top: 0;
+    left: 0;
+    background: #fff;
+    transform: scale(1.1);
+    box-shadow: 0 2px 5px rgba(0,0,0,.3);
+    transition: .5s ease;
+}
+
+#dSwitch input:checked[type="checkbox"]:before, #dSwitch2 input:checked[type="checkbox"]:before{
+    left: 40px;
+}
+
+#dSwitch2, .prendido{
+    transition: 0.3s all ease-in-out;
+    -moz-transition: 0.3s all ease-in-out;
+    -webkit-transition: 0.3s all ease-in-out;
+}
+
+.prendido{
+    width: 450px;
+    margin: 0 auto;
+}
+
+#switchs{
+    margin: 0 auto;
+    width: 400px;
+    height: 100px;
+    position: relative;
+}
+
+#dSwitch2{
+    position: absolute;
+    right:0;
+    top:10px;
+}
+
+#dSwitch{
+    position: absolute;
+    left:0;
+    top:10px;
+    z-index: 1;
+
+}
+
+#dSwitch img, #dSwitch2 img{
+    height: 20px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+}
+
+#contBrillo{
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    height: 50px;
+}
+
+#contBrillo img{
+    position: absolute;
+    left: 5px;
+    top: -10px;
+    height: 30px;
+}
+
+#brillo{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 85%;;
+}
+
+/*slider*/
+.slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 10px;
+  border-radius: 20px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.85;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  cursor: pointer;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #DB1E54 ;
+  cursor: pointer;
+  box-shadow: 0px 0px 50px 1px #DB1E54;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #DB1E54 ;
+  cursor: pointer;
+  box-shadow: 0px 0px 50px 1px #DB1E54;
+}
+ 
+  /*background: url('img/brightness-and-contrast-adjustment.svg');*/
+
+/*circulo*/
+.IroWheel, .IroSlider{
+    display: block;
+    margin: 10px auto;
+}
+
+input[type="submit"]{
+    display: block;
+    margin: 10px auto;
+}
+
+.submit img{
+    height: 50px;
+    display: block;
+    margin: 20px auto;
+}
+
+footer{
+    overflow: hidden;
+    background-color: #DB1E54;
+    padding: 24px;
+}
+
+header{
+    overflow: hidden;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #DB1E54;
+}
+
+nav{
+    width: 500px;
+    margin: 0 auto;
+}
+
+
+footer p, nav a{
+    float: left;
+    width: 33%;
+    color: whitesmoke;
+    transition: 0.3s all ease-in-out;
+    text-decoration: none;
+}
+
+nav a{
+    opacity: 0.7;
+}
+nav a:hover{
+    opacity: 1;
+}
+
+.activo{
+    opacity: 1;
+}
+
+footer p{
+    font-weight: normal;
+}
+
+form{
+    position: relative;
+}
+
+.ocultar{
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    background-color: #1E1E1E;
+    z-index: 1;
+    opacity: 0.5;
+}
+
+/*responsive*/
+@media screen and (max-width: 420px){
+
+    body{
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+    header{
+    display: none;    
+    }
+
+    footer{
+        display: none;
+    }
+
+    .contenedor{
+       max-width:  100%;
+    }
+    #switchs{
+        width: 90%;
+        margin: 2% 5%;
+        height: 85px;
+    }
+    .prendido{
+        width: 100%;
+    
+    }
+    #contBrillo{
+        width: 100%;
+        height: 35px;
+    }
+    #contBrillo img {
+        left: 10px;
+    }
+    .slider {
+        opacity: 1;
+    }
+}
